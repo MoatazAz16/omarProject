@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        .top-bar {
+            background-color: #1f2937;
+            padding: 10px 0;
+            color: white;
+        }
+
+        .nav-links {
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        .main-content {
+            padding: 40px 20px;
+            min-height: 70vh;
+        }
+
+        .footer {
+            background-color: #111827;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .footer-top {
+            background-color: #1f2937;
+            color: white;
+            padding: 60px 0;
+        }
+
+        .footer-top .footer-logo a {
+            font-size: 24px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-social a {
+            color: #ffffff;
+            margin: 0 10px;
+        }
+
+        .footer-social a:hover {
+            color: #38bdf8;
+        }
+
+        .footer-newsletter input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #scroll-Top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: none;
+            background-color: #111827;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        #scroll-Top i {
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Scroll to Top functionality
+            const scrollTopBtn = document.getElementById('scroll-Top');
+            window.onscroll = function () {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    scrollTopBtn.style.display = 'block';
+                } else {
+                    scrollTopBtn.style.display = 'none';
+                }
+            };
+
+            scrollTopBtn.addEventListener('click', function () {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            });
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body>
+    <form runat="server">
+        <!-- ✅ شريط علوي -->
+        <div class="top-bar">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="Home.aspx">Home</a></li>
+                    <li><a href="Featured_Cars.aspx">Featured Cars</a></li>
+                    <li><a href="Team.aspx">Team</a></li>
+                    <li><a href="Contact.aspx">Contact</a></li>
+                    <li><a href="LogIn.aspx">Log In</a></li>
+                    <li><a href="SignIn.aspx">Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ✅ محتوى الصفحات -->
+        <div class="main-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" />
+        </div>
+
+        <!-- ✅ Footer -->
+        <div class="footer">
+            <p>All Rights Reserved by &copy; Diamond Road Cars  2025</p>
+        </div>
+
+        <button id="scroll-Top">
+            <i class="fa fa-arrow-up"></i>
+        </button>
+    </form>
+</body>
+</html>

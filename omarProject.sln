@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "omarProject", "omarProject\omarProject.csproj", "{B8887A79-F349-4C19-9616-E9CDA796AC1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "businessmodel", "businessmodel\businessmodel.csproj", "{98BF8BEE-2228-48B0-ABBD-3DD45B1F39BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "viewmodel", "viewmodel\viewmodel.csproj", "{2A251F12-6434-446B-8917-9A5512526F43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService2", "WcfService2\WcfService2.csproj", "{987CCB79-5DB6-4886-A410-F90337362579}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "carvilla-v1.0", "Carvilla Free Website Template - Free-CSS.com\carvilla-v1.0\", "{DAE27A2A-9770-42A3-F3EC-FCB06BFDA0C4}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_56652"
+		Debug.AspNetCompiler.PhysicalPath = "Carvilla Free Website Template - Free-CSS.com\carvilla-v1.0\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56652\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_56652"
+		Release.AspNetCompiler.PhysicalPath = "Carvilla Free Website Template - Free-CSS.com\carvilla-v1.0\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_56652\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "56652"
+		SlnRelativePath = "Carvilla Free Website Template - Free-CSS.com\carvilla-v1.0\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csproj", "{589791C6-5CF2-4007-A938-995402A49956}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8887A79-F349-4C19-9616-E9CDA796AC1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8887A79-F349-4C19-9616-E9CDA796AC1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8887A79-F349-4C19-9616-E9CDA796AC1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8887A79-F349-4C19-9616-E9CDA796AC1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BF8BEE-2228-48B0-ABBD-3DD45B1F39BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BF8BEE-2228-48B0-ABBD-3DD45B1F39BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BF8BEE-2228-48B0-ABBD-3DD45B1F39BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BF8BEE-2228-48B0-ABBD-3DD45B1F39BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A251F12-6434-446B-8917-9A5512526F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A251F12-6434-446B-8917-9A5512526F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A251F12-6434-446B-8917-9A5512526F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A251F12-6434-446B-8917-9A5512526F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987CCB79-5DB6-4886-A410-F90337362579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987CCB79-5DB6-4886-A410-F90337362579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987CCB79-5DB6-4886-A410-F90337362579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987CCB79-5DB6-4886-A410-F90337362579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE27A2A-9770-42A3-F3EC-FCB06BFDA0C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE27A2A-9770-42A3-F3EC-FCB06BFDA0C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE27A2A-9770-42A3-F3EC-FCB06BFDA0C4}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE27A2A-9770-42A3-F3EC-FCB06BFDA0C4}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{589791C6-5CF2-4007-A938-995402A49956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589791C6-5CF2-4007-A938-995402A49956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589791C6-5CF2-4007-A938-995402A49956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589791C6-5CF2-4007-A938-995402A49956}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5689EBA4-8CC4-4391-A5E2-393E5BD6C4DB}
+	EndGlobalSection
+EndGlobal

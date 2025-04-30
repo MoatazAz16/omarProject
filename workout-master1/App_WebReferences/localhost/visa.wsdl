@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UpdateTotal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visa" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="money" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateTotalResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ShowAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="ShowAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidMoney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visa" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="money" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ValidMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ValidMoneyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iscardexist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="holdername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="securitycode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="month" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="year" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="iscardexistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="iscardexistResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTotalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTotalResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRangeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonth">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMonthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMonthResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetYearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetYearResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="visa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateTotalSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateTotal" />
+  </wsdl:message>
+  <wsdl:message name="UpdateTotalSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowAllSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowAll" />
+  </wsdl:message>
+  <wsdl:message name="ShowAllSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ValidMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:ValidMoney" />
+  </wsdl:message>
+  <wsdl:message name="ValidMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:ValidMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="iscardexistSoapIn">
+    <wsdl:part name="parameters" element="tns:iscardexist" />
+  </wsdl:message>
+  <wsdl:message name="iscardexistSoapOut">
+    <wsdl:part name="parameters" element="tns:iscardexistResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTotal" />
+  </wsdl:message>
+  <wsdl:message name="GetTotalSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTotalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRangeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRange" />
+  </wsdl:message>
+  <wsdl:message name="GetRangeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMonth" />
+  </wsdl:message>
+  <wsdl:message name="GetMonthSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMonthResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetYearSoapIn">
+    <wsdl:part name="parameters" element="tns:GetYear" />
+  </wsdl:message>
+  <wsdl:message name="GetYearSoapOut">
+    <wsdl:part name="parameters" element="tns:GetYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetName" />
+  </wsdl:message>
+  <wsdl:message name="GetNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCode" />
+  </wsdl:message>
+  <wsdl:message name="GetCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VisaWebServiceSoap">
+    <wsdl:operation name="UpdateTotal">
+      <wsdl:input message="tns:UpdateTotalSoapIn" />
+      <wsdl:output message="tns:UpdateTotalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowAll">
+      <wsdl:input message="tns:ShowAllSoapIn" />
+      <wsdl:output message="tns:ShowAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidMoney">
+      <wsdl:input message="tns:ValidMoneySoapIn" />
+      <wsdl:output message="tns:ValidMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="iscardexist">
+      <wsdl:input message="tns:iscardexistSoapIn" />
+      <wsdl:output message="tns:iscardexistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotal">
+      <wsdl:input message="tns:GetTotalSoapIn" />
+      <wsdl:output message="tns:GetTotalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRange">
+      <wsdl:input message="tns:GetRangeSoapIn" />
+      <wsdl:output message="tns:GetRangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMonth">
+      <wsdl:input message="tns:GetMonthSoapIn" />
+      <wsdl:output message="tns:GetMonthSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetYear">
+      <wsdl:input message="tns:GetYearSoapIn" />
+      <wsdl:output message="tns:GetYearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetName">
+      <wsdl:input message="tns:GetNameSoapIn" />
+      <wsdl:output message="tns:GetNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCode">
+      <wsdl:input message="tns:GetCodeSoapIn" />
+      <wsdl:output message="tns:GetCodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VisaWebServiceSoap" type="tns:VisaWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateTotal">
+      <soap:operation soapAction="http://tempuri.org/UpdateTotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAll">
+      <soap:operation soapAction="http://tempuri.org/ShowAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidMoney">
+      <soap:operation soapAction="http://tempuri.org/ValidMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iscardexist">
+      <soap:operation soapAction="http://tempuri.org/iscardexist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotal">
+      <soap:operation soapAction="http://tempuri.org/GetTotal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRange">
+      <soap:operation soapAction="http://tempuri.org/GetRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonth">
+      <soap:operation soapAction="http://tempuri.org/GetMonth" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYear">
+      <soap:operation soapAction="http://tempuri.org/GetYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetName">
+      <soap:operation soapAction="http://tempuri.org/GetName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCode">
+      <soap:operation soapAction="http://tempuri.org/GetCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VisaWebServiceSoap12" type="tns:VisaWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateTotal">
+      <soap12:operation soapAction="http://tempuri.org/UpdateTotal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowAll">
+      <soap12:operation soapAction="http://tempuri.org/ShowAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidMoney">
+      <soap12:operation soapAction="http://tempuri.org/ValidMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="iscardexist">
+      <soap12:operation soapAction="http://tempuri.org/iscardexist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotal">
+      <soap12:operation soapAction="http://tempuri.org/GetTotal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRange">
+      <soap12:operation soapAction="http://tempuri.org/GetRange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMonth">
+      <soap12:operation soapAction="http://tempuri.org/GetMonth" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetYear">
+      <soap12:operation soapAction="http://tempuri.org/GetYear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetName">
+      <soap12:operation soapAction="http://tempuri.org/GetName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCode">
+      <soap12:operation soapAction="http://tempuri.org/GetCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VisaWebService">
+    <wsdl:port name="VisaWebServiceSoap" binding="tns:VisaWebServiceSoap">
+      <soap:address location="http://localhost:51125/visa.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VisaWebServiceSoap12" binding="tns:VisaWebServiceSoap12">
+      <soap12:address location="http://localhost:51125/visa.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
